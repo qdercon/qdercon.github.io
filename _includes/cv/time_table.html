@@ -3,56 +3,52 @@
       <li class="list-group-item">
         <div class="row">
           {% if content.year %}
-            <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
-              <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px;">
+            <div class="col-xs-1 cl-sm-1 col-md-1 text-center" style="width: 100px;line-height: 1;">
+              <span class="badge font-weight-bold danger-color-dark" style="min-width: 65px">
                 {{ content.year }}
               </span>
             </div>
           {% endif %}
-          <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+          {% if content.title || content.institution %}
+          <div class="{% if content.logo %}col-xs-8 cl-sm-8 col-md-8{% else %}col-xs-11 cl-sm-11 col-md-11{% endif %} mt-2 mt-md-0">
             {% if content.title %}
             <h6 class="title font-weight-bold ml-1 ml-md-4">{{content.title}}</h6>
             {% endif %}
             {% if content.institution %}
-            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;">{{content.institution}}</h6>
-            {% endif %}
-            {% if content.description %}
-              <ul class="items">
-                {% for item in content.description %}
-                  <li>
-                    {% if item.contents %}
-                      <span class="item-title">{{ item.title }}</span>
-                      <ul class="subitems">
-                      {% for subitem in item.contents %}
-                        <li><span class="subitem">{{ subitem }}</span></li>
-                      {% endfor %}
-                      </ul>
-                    {% else %}
-                      <span class="item">{{ item }}</span>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-            {% if content.items %}
-              <ul class="items">
-                {% for item in content.items %}
-                  <li>
-                    {% if item.contents %}
-                      <span class="item-title">{{ item.title }}</span>
-                      <ul class="subitems">
-                      {% for subitem in item.contents %}
-                        <li><span class="subitem">{{ subitem }}</span></li>
-                      {% endfor %}
-                      </ul>
-                    {% else %}
-                      <span class="item">{{ item }}</span>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
+            <h6 class="ml-1 ml-md-4" style="font-size:0.95rem">{{content.institution}}</h6>
             {% endif %}
           </div>
+          {% if content.logo %}
+          <div class="col-xs-3 cl-sm-3 col-md-3 text-center" style="width: 75px;">
+            <span class="{{ content.logo_class }}"> 
+              <img src="{{ content.logo }}" alt="{{ content.institution }}" class="img-fluid" style="max-width:125px;max-height: 50px;">
+            </span>
+          </div>
+          {% endif %}
+          {% endif %}
+          {% if content.info %}
+            {% if content.title || content.institution %}
+            <div class="col-xs-1 cl-sm-1 col-md-1 text-center" style="width: 100px;"></div>
+            {% endif %}
+          <div class="col-xs-11 cl-sm-11 col-md-11 mt-2 mt-md-0" style="font-size:0.9rem">
+            <ul class="items">
+              {% for item in content.info %}
+                <li>
+                  {% if item.contents %}
+                    <span class="{% if content.no_title %}cv.no_title{% else %}item-title{% endif %}">{{ item.title }}</span>
+                    <ul class="subitems">
+                    {% for subitem in item.contents %}
+                      <li><span class="subitem">{{ subitem }}</span></li>
+                    {% endfor %}
+                    </ul>
+                  {% else %}
+                    <span class="item">{{ item }}</span>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
         </div>
       </li>
     {% endfor %}

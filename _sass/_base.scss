@@ -5,6 +5,7 @@
 // Typography
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
+  font-family: 'Oxygen', sans-serif;
   color: var(--global-text-color);
 }
 
@@ -94,6 +95,7 @@ blockquote {
 
 .profile {
   margin-left: 1rem;
+  margin-top: -1rem;
   width: 100%;
 
   .address {
@@ -174,7 +176,7 @@ blockquote {
   }
   .navbar-nav .nav-item.active>.nav-link {
       background-color: inherit;
-      font-weight: bolder;
+      font-weight: 700;
       color: var(--global-theme-color);
       &:hover {
         color: var(--global-hover-color);
@@ -271,6 +273,7 @@ blockquote {
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
+  text-align: center;
   .container {
     color: var(--global-footer-text-color);
     padding-top: 9px;
@@ -290,6 +293,7 @@ footer.sticky-bottom {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 // CV
@@ -309,6 +313,9 @@ footer.sticky-bottom {
         background-color: var(--global-theme-color) !important;
       }
     }
+  }
+  .no_title {
+    padding-top: -5rem;
   }
 }
 
@@ -476,9 +483,10 @@ footer.sticky-bottom {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
     text-align: right;
+    font-size: 1.5rem;
   }
   ol.bibliography {
     list-style: none;
@@ -491,6 +499,7 @@ footer.sticky-bottom {
         width: 100%;
         min-width: 80px;
         max-width: 200px;
+        margin-top: 0.25rem;
       }
       .abbr {
         height: 2rem;
@@ -513,9 +522,13 @@ footer.sticky-bottom {
         }
       }
       .title {
-        font-weight: bolder;
+        font-weight: 700;
+        margin-right: 0.25rem;
       }
       .author {
+        font-size: small;
+        padding-top: 0.25rem;
+        padding-bottom: 0.5rem;
         a {
           border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
@@ -524,8 +537,9 @@ footer.sticky-bottom {
           }
         }
         > em {
-          border-bottom: 1px solid;
+          // border-bottom: 1px solid;
           font-style: normal;
+          font-weight: 700;
         }
         > span.more-authors {
           color: var(--global-text-color-light);
@@ -537,12 +551,13 @@ footer.sticky-bottom {
           }
         }
       }
+
       .links {
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           &:hover {
@@ -573,7 +588,7 @@ footer.sticky-bottom {
         }
       }
       .hidden.open {
-        max-height: 100em;
+        max-height: 120em;
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
         -ms-transition: 0.15s ease;
@@ -586,8 +601,97 @@ footer.sticky-bottom {
       div.abstract.hidden.open {
         border-color: var(--global-text-color);
       }
+      div.description.hidden {
+        border: dashed 1px var(--global-bg-color);
+      }
+      div.description.hidden.open {
+        border-color: var(--global-text-color);
+      }
     }
   }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 7rem;
+  z-index: 1000;
+  display: none;
+  float: left;
+  padding: 0.1rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 0.9rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: var(--global-code-bg-color);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+/* Toggle altmetric badges - source: https://www.w3schools.com/howto/howto_css_switch.asp*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5rem; // 60px
+  height: 1.5rem; // 34px
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--global-slider-off-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.15rem; // 26px
+  width: 1.15rem; // 26px
+  left: 0.175rem;
+  top: 0.175rem;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--global-slider-on-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--global-slider-on-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1rem); // 26px
+  -ms-transform: translateX(1rem); // 26px
+  transform: translateX(1rem); // 26px
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 1.5rem; // 34px
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 // Rouge Color Customization

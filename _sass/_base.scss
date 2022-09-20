@@ -34,7 +34,7 @@ a, table.table a {
 }
 
 figure, img {
-  max-width: 90vw;
+  max-width: 30vw;
 }
 
 blockquote {
@@ -95,8 +95,7 @@ blockquote {
 
 .profile {
   margin-left: 1rem;
-  margin-top: -1rem;
-  width: 100%;
+  margin-top: 0.25rem;
 
   .address {
     margin-bottom: 5px;
@@ -693,6 +692,21 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+@media only screen {
+  .row-column {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:700px) {
+  .row-column {
+    flex-direction: row;
+    width: 270px;
+    justify-content: space-between;
+  }
+}
+
 
 // Rouge Color Customization
 figure.highlight {

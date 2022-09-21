@@ -701,8 +701,8 @@ input:checked + .slider:before {
 @media (max-width:768px) {
   .row-column {
     flex-direction: row;
-    width: 280px;
-    justify-content: space-between;
+    width: 80vw;
+    justify-content: flex-start;
   }
 }
 

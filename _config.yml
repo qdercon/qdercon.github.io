@@ -38,7 +38,7 @@ repo_theme_dark: calm           # https://github.com/anuraghazra/github-readme-s
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -70,7 +70,7 @@ twitter_username: qdercon
 linkedin_username: quentin-dercon-075804195
 scholar_userid: i7ePGNQAAAAJ
 semanticscholar_id: # your Semantic Scholar ID
-orcid_id: 0000-0001-8264-347X
+orcid_id: # 0000-0001-8264-347X
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons

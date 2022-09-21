@@ -5,7 +5,7 @@
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.altmetric -%}
-          <div class="d-flex justify-content-left row-column">
+          <div class="d-flex justify-content-left row-column" style="align-items: center;">
             <div href="{{ entry.url }}" style="padding-bottom:0.5rem"><img class="preview" src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}"></div>
             <div class="d-flex justify-content-center">
               <a class='altmetric-embed' style="display:none" data-badge-type='donut' data-doi="{{ entry.doi }}"></a>

@@ -70,12 +70,20 @@
             <!-- replace space with &nbsp; --> 
             {%- assign author_first_name = author.first | replace: " ", "&nbsp;" -%}
             {%- if author_is_self -%}
+              {%- if author.last contains "†" -%}
+              <em>{{author_first_name}}&nbsp;{{author_last_name}}</em><sup>†</sup>
+              {%- else -%}
               <em>{{author_first_name}}&nbsp;{{author.last}}</em>
+              {%- endif -%}
             {%- else -%}
               {%- if coauthor_url -%}
                 <a href="{{coauthor_url}}">{{author_first_name}}&nbsp;{{author.last}}</a>
               {%- else -%}
+                {%- if author.last contains "†" -%}
+                {{author_first_name}}&nbsp;{{author_last_name}}<sup>†</sup>
+                {%- else -%}
                 {{author_first_name}}&nbsp;{{author.last}}
+                {%- endif -%}
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}

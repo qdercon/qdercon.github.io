@@ -34,7 +34,7 @@ a, table.table a {
 }
 
 figure, img {
-  max-width: 30vw;
+  max-width: 90vw;
 }
 
 blockquote {
@@ -322,7 +322,7 @@ footer.sticky-bottom {
 
 @media (min-width: 768px) {
   .repo {
-    max-width: 50%;
+    width: 50%;
   }
 }
 
@@ -698,7 +698,7 @@ input:checked + .slider:before {
   flex-direction: column;
 }
 
-@media (max-width:700px) {
+@media (max-width:768px) {
   .row-column {
     flex-direction: row;
     width: 270px;

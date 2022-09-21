@@ -693,17 +693,15 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media only screen {
-  .row-column {
-    flex-direction: column;
-  }
+
+.row-column {
+  flex-direction: column;
 }
 
-@media only screen and (max-width:700px) {
+@media (max-width:700px) {
   .row-column {
     flex-direction: row;
     width: 270px;
-    justify-content: space-between;
   }
 }
 

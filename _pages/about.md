@@ -14,7 +14,7 @@ news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-Hi there! My name is Quentin, and I'm a first-year PhD student in mental health science at [UCL](https://www.ucl.ac.uk/), funded by the [Wellcome Trust](https://wellcome.org/).
+Hi there! My name is Quentin, and I'm a first-year PhD student in [mental health science](https://www.mentalhealthscience.org/) at UCL, funded by the [Wellcome Trust](https://wellcome.org/).
 
 My current research interests include:
 <ol>

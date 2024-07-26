@@ -14,13 +14,13 @@ news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-Hi there! My name is Quentin, and I'm a first-year PhD student in [mental health science](https://www.mentalhealthscience.org/) at UCL, funded by the [Wellcome Trust](https://wellcome.org/).
+Hi there! My name is Quentin, and I'm a PhD student studying [mental health science](https://www.mentalhealthscience.org/), based in the [Applied Computational Psychiatry lab](https://acplab.org/) at UCL.
 
 My current research interests include:
 <ol>
-  <li>how mental ill-health affects decision-making and learning</li>
-  <li>how existing and novel interventions may also target these processes</li>
-  <li>how insights into the computational underpinnings of mental ill-health can be used to help guide clinical decisions</li>
+  <li>how treatments for mental ill-health alter learning and other cognitive processes</li>
+  <li>how we can formalise the mechanisms of individual components of psychological and pharmacological interventions</li>
+  <li>how mechanistic insights can be used to predict responses to treatments and personalise clinical decision-making</li>
 </ol> 
 
-Feel free to follow me on [Twitter](https://twitter.com/qdercon) to keep up to date with my work, or get in touch directly via the email icon at the bottom of the page.
+Feel free to follow me on [X](https://twitter.com/qdercon) to keep up to date with my work, or get in touch directly via the email icon at the bottom of the page.

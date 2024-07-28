@@ -23,4 +23,4 @@ My current research interests include:
   <li>how mechanistic insights can be used to predict responses to treatments and personalise clinical decision-making</li>
 </ol> 
 
-Feel free to follow me on [X](https://twitter.com/qdercon) to keep up to date with my work, or get in touch directly via the email icon at the bottom of the page.
+Feel free to follow me on <b>[X](https://twitter.com/qdercon)</b> to keep up to date with my work, or get in touch directly via the email icon at the bottom of the page.

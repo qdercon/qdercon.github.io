@@ -18,9 +18,9 @@ Hi there! My name is Quentin, and I'm a PhD student studying [mental health scie
 
 My current research interests include:
 <ol>
-  <li>how treatments for mental ill-health alter learning and other cognitive processes</li>
-  <li>how we can formalise the mechanisms of individual components of psychological and pharmacological interventions</li>
-  <li>how mechanistic insights can be used to predict responses to treatments and personalise clinical decision-making</li>
+  <li>how psychological treatments for symptoms of mental ill-health alter learning, affect, and other cognitive processes</li>
+  <li>how we can formalise the mechanisms of individual components of psychological interventions</li>
+  <li>how mechanistic insights can be used to predict responses to psychological therapies and personalise clinical decision-making</li>
 </ol> 
 
-Feel free to follow me on <b>[X](https://twitter.com/qdercon)</b> to keep up to date with my work, or get in touch directly via the email icon at the bottom of the page.
+Feel free to follow me on <b>[Bluesky](https://bsky.app/profile/qdercon.bsky.social)</b> to keep up to date with my work, or get in touch directly via the email icon at the bottom of the page.
